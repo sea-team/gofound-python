@@ -2,6 +2,11 @@
 
 Gofound全文检索，python客户端
 
+## 安装
+
+```bash
+pip install gofound
+```
 
 例子：
 
