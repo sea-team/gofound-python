@@ -2,11 +2,14 @@
 
 Gofound全文检索，python客户端
 
-## 安装
+## 安装客户端
 
 ```bash
 pip install gofound
 ```
+
+## 安装服务端
+[安装GoFound](https://github.com/newpanjing/gofound)
 
 例子：
 
