@@ -13,12 +13,13 @@ class Client(object):
         self.request = requests.Session()
         self.request.headers["Client-Type"] = "python"
 
-    def query(self, query, page=1, limit=10, order=SearchOrder.DESC):
+    def query(self, query, page=1, limit=10, order=SearchOrder.DESC, highlight=None):
         res = self.request.post(self.url + "/query", json={
             "query": query,
             "page": page,
             "limit": limit,
-            "order": order
+            "order": order,
+            'highlight': highlight
         })
         return res.json()
 

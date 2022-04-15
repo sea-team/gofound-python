@@ -28,6 +28,22 @@ def search():
                 print(item)
 
 
+def highlight():
+    """
+    关键词高亮
+    """
+    client = gofound.Client(url="http://127.0.0.1:5678/api")
+    res = client.query("探访海南自贸港", page=1, limit=10, order="desc", highlight={'preTag': '<span>', 'postTag': '</span>'})
+    print(res)
+
+    # 遍历数据
+    if res.get('state'):
+        documents = res.get('data').get('documents')
+        if documents:
+            for item in documents:
+                print(item)
+
+
 def remove():
     """
     删除索引
