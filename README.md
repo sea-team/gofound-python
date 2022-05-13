@@ -22,6 +22,8 @@ def add_document():
     添加索引
     """
     client = gofound.Client(url="http://127.0.0.1:5678/api")
+    # 认证和指定数据库
+    # client = gofound.Client(url="http://127.0.0.1:5678/api",database="test",auth=('admin','123456')
     res = client.add_document(1000, "探访海南自贸港“样板间”", {
         "content": "洋浦经济开发区地处海南西北部洋浦半岛，是21世纪海上丝绸之路与西部陆海新通道的交汇节点。是国务院1992年批准设立的。我国第一个由外商成片开发、享受保税区政策的国家级开发区",
     })

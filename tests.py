@@ -54,6 +54,6 @@ def remove():
 
 
 if __name__ == '__main__':
-    # add_document()
+    add_document()
     search()
     # remove()
