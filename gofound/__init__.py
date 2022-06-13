@@ -1,4 +1,5 @@
-from .client import Client
+from gofound.client import Client, AsyncClient
+from gofound.exceptions import DBException, AuthException
 
 
 def get_version():
