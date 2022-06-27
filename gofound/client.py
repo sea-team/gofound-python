@@ -75,7 +75,7 @@ class Client(object):
         """
         删除文档
         """
-        res = self._post("remove", json={
+        res = self._post("index/remove", json={
             "id": id
         })
         return res.json()
